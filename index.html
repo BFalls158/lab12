@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="scripts/angular.min.js"></script>
+	<script src="scripts/script.js"></script>
+	<script src="scripts/alphaController.js"></script>
+</head>
+
+	<body ng-app="app" ng-controller="alphaController">
+		<h2>This is my To-Do list</h2>
+
+		<form>	
+			<input type="text" ng-model="item.name">
+			<button type="submit" ng-click="addItem(item); item.name=''">Add / Remove</button>
+
+			<label>Filter Items : <input type="text" ng-model="filter"/></label>
+		</form>
+
+		<table>
+			<tr>
+				<th>Things that I need to do:</th>
+			</tr>
+			<tr ng-repeat="item in toDoList | filter: filter">
+				<td> {{ item.itemName }} </td>
+			</tr>
+		</table>
+	</body>
+</html>
