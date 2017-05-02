@@ -3,13 +3,13 @@ app.controller('alphaController', function($scope){
 
 	$scope.toDoList = [
 		{
-			itemName: 'Your Mom'
+			itemName: 'Write all the loops'
 		},
 		{
-			itemName: 'Get dry cleaning'
+			itemName: 'Get all of the dry cleaning'
 		},
 		{
-			itemName: 'Go to grocery store'
+			itemName: 'Go to all the grocery stores'
 		},
 		{
 			itemName: 'Eat all the pizza'
